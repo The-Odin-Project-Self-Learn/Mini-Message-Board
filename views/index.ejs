@@ -6,6 +6,9 @@
     <% messages.forEach((message) => { %>
         <%- include('messages/messageDetails', {message: message}) %>
     <% }); %>
+    <form method = "GET" action = "/new">
+        <button type = "submit">New Message</button>
+    </form>
   </body>
 </html>
 
