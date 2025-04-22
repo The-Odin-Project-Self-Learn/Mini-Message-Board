@@ -1,1 +1,1 @@
-# Mini-Message-Board
+Message board app using Express
