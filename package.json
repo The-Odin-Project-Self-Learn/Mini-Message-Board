@@ -7,6 +7,7 @@
   },
   "scripts": {
     "db-setup": "node db/populatedb.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "watch": "node --watch app.js"
   }
 }
