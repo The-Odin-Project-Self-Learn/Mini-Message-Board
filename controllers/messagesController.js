@@ -38,8 +38,8 @@ async function deleteMessage(req, res) {
             console.log("Message deleted!");
             res.redirect("/"); 
         } else {
-            console.log("All messages deleted!");
             await db.deleteAllMessages();
+            console.log("All messages deleted!");
             res.redirect("/");
         }
     } catch (err) {
