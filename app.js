@@ -19,7 +19,8 @@ app.get("/new", messagesController.getNewMessage);
 app.use(express.urlencoded({extended: true}));
 app.post("/new", messagesController.postNewMessage);
 
-//when POST request made to /delete route, we want to delete the given message if given
+//
+app.get("/delete", messagesController.deleteMessage);
 app.post("/delete", messagesController.deleteMessage);
 
 app.listen(3000, () => {

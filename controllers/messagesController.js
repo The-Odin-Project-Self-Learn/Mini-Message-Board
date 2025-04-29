@@ -32,12 +32,13 @@ async function postNewMessage(req, res) {
 
 async function deleteMessage(req, res) {
     try {
-        if (req.body.id) {
+        if (req.body) {
             const messageID = req.body.id;
             await db.deleteMessage(messageID);
             console.log("Message deleted!");
             res.redirect("/"); 
         } else {
+            console.log("All messages deleted!");
             await db.deleteAllMessages();
             res.redirect("/");
         }
