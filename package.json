@@ -1,6 +1,13 @@
 {
   "dependencies": {
+    "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.15.6"
+  },
+  "scripts": {
+    "db-setup": "node db/populatedb.js",
+    "start": "node app.js",
+    "watch": "node --watch app.js"
   }
 }
