@@ -12,7 +12,17 @@ async function postNewMessage(username, message) {
     );
 }
 
+async function deleteAllMessages() {
+    await pool.query("DELETE FROM messages");
+}
+
+async function deleteMessage(messageID) {
+    await pool.query(`DELETE FROM messages WHERE id = ${messageID}`);
+}
+
 module.exports = {
     getAllMessages,
     postNewMessage,
+    deleteMessage,
+    deleteAllMessages,
 };

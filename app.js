@@ -19,6 +19,9 @@ app.get("/new", messagesController.getNewMessage);
 app.use(express.urlencoded({extended: true}));
 app.post("/new", messagesController.postNewMessage);
 
+//when POST request made to /delete route, we want to delete the given message if given
+app.post("/delete", messagesController.deleteMessage);
+
 app.listen(3000, () => {
     console.log("Server is running on port 3000!");
 });
